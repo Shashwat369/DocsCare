@@ -1,0 +1,16 @@
+export const departmentOptions = [
+  { value: "Cardiology", label: "Cardiology" },
+  { value: "Neurology", label: "Neurology" },
+  { value: "Orthopedics", label: "Orthopedics" },
+  { value: "General", label: "General" },
+  { value: "Pediatrics", label: "Pediatrics" },
+  { value: "Dermatology", label: "Dermatology" },
+  { value: "Psychiatry", label: "Psychiatry" },
+  { value: "Gynecology", label: "Gynecology" },
+  { value: "Oncology", label: "Oncology" },
+  { value: "Radiology", label: "Radiology" },
+  { value: "Urology", label: "Urology" },
+  { value: "ENT", label: "ENT" },
+  { value: "Ophthalmology", label: "Ophthalmology" },
+  { value: "Other", label: "Other" },
+];

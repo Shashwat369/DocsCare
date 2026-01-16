@@ -1,0 +1,93 @@
+
+.home-container {
+  /* Use vertical padding instead of horizontal */
+  padding: 2rem 1rem; 
+  background-color: rgb(235, 230, 230);
+  min-height: 80vh; /* Make sure it's not tiny */
+  display: flex;
+  align-items: center;
+}
+
+/* This is the white box */
+.home-layout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  gap: 2rem; /* Use rem for spacing */
+
+  /* --- RESPONSIVE FIX 1 --- */
+  /* This is the key: Center the content with a max-width,
+     instead of using large, fixed padding. */
+  max-width: 1200px; /* e.g., max content width */
+  margin: 0 auto;    /* Centers the .home-layout box */
+  padding: 2rem;    /* Padding *inside* the white box */
+  border-radius: 10px;
+
+  /* --- RESPONSIVE FIX 2 --- */
+  /* Allow items to stack on top of each other on small screens */
+  flex-wrap: wrap;
+}
+
+.home-layout img {
+  /* --- RESPONSIVE FIX 3 --- */
+  /* Make the image responsive */
+  max-width: 100%; 
+  height: auto;    /* Maintain aspect ratio */
+  
+  /* Use flex-basis to suggest a width, but allow it to grow/shrink */
+  flex-basis: 400px; 
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.home-layout-discription {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 500px; /* Suggest a starting width */
+  flex-grow: 2;      /* Allow this to take up more space than the image */
+}
+
+.home-layout-discription h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-style: italic;
+  padding: 0; /* No need for padding here */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.home-layout-discription h1 span {
+  font-size: 3.5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#0b6a8a), to(#09b179));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-layout-discription p {
+  color: rgb(97, 97, 97);
+  text-align: justify;
+  padding: 0; /* No padding needed */
+  line-height: 1.6; /* Add line-height for readability */
+}
+
+/* --- RESPONSIVE FIX 4: MEDIA QUERY --- */
+/* This code runs only for screens 768px or smaller (tablets/phones) */
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .home-layout {
+    /* Stack the image and text vertically */
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .home-layout-discription h1 {
+    font-size: 2rem; /* Make font smaller on mobile */
+  }
+  .home-layout-discription h1 span {
+    font-size: 2.5rem; /* Make font smaller on mobile */
+  }
+}

@@ -1,0 +1,73 @@
+.how-it-works {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 3rem;
+  color: #07346a;
+}
+
+.how-subtitle {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.steps {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background: #f5fbfd;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 280px;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  background-color: #07346a;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card h3 {
+  color: #07346a;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .how-it-works h2 {
+    font-size: 2.2rem;
+  }
+
+  .steps {
+    gap: 20px;
+  }
+}

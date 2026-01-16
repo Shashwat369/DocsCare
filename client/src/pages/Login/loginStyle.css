@@ -1,0 +1,210 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    height: 88vh;
+    background: linear-gradient(to right, #1194be, #0be099);
+    overflow: hidden;
+}
+
+/* Image section */
+.login-container .login-img {
+    flex-basis: 65%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.login-container .login-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form card */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    align-items: center;
+    height: 24rem;
+    width: 22rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 0px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 0 auto;
+}
+
+/* Heading */
+.login-container .login-heading {
+    font-size: 2.6rem;
+    font-weight: bolder;
+    background: linear-gradient(to right, #0b6a8a, #09b179);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Message Success/Error */
+.login-container .auth-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-container .auth-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.login-container .auth-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* 🔥 FIXED ALIGNMENT HERE */
+.login-container .login-details {
+    display: grid;
+    grid-template-columns: 110px 1fr; /* FIXED label width */
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.login-details label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: right;
+    background: linear-gradient(to right, #0b6a8a, #09b179);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-details input {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.login-details input:focus {
+    outline: none;
+    border: 2px solid teal;
+}
+
+/* Login button */
+.login-container .login-btn {
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #1194be, #0be099);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #0be099, #1194be);
+    transform: scaleX(1.1);
+}
+
+/* Footer text */
+.login-container p {
+    font-size: 0.8rem;
+}
+
+.login-container p a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0b6a8a;
+    font-size: 0.9rem;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Forget Password Style */
+
+.forget-password {
+    font-size: 0.8rem;
+    color: #0b6a8a;
+    text-decoration: none;
+    margin-top: -10px;
+    text-align: center;
+    margin-top: 2px;
+}
+.forget-password:hover {
+    text-decoration: underline;
+}
+.forget-password:active {
+    color: #09b179;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .login-container .login-img {
+        display: none;
+    }
+
+    .login-container form {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px 20px;
+        gap: 1.5rem;
+        height: auto;
+    }
+
+    .login-container .login-heading {
+        font-size: 2.5rem;
+    }
+
+    /* Mobile alignment */
+    .login-container .login-details {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .login-details label {
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .login-details input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-container form {
+        padding: 20px 15px;
+        gap: 1rem;
+    }
+
+    .login-container .login-heading {
+        font-size: 2rem;
+    }
+
+    .login-details label {
+        font-size: 1rem;
+    }
+}

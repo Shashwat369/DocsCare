@@ -1,0 +1,23 @@
+.coming-soon-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.coming-soon-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.coming-soon-container span {
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 600;
+}
+.coming-soon-container p {
+  font-size: 18px;
+  color: #777;
+}

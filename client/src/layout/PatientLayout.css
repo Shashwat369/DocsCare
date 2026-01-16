@@ -1,0 +1,28 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.dashboard-main {
+  flex: 1;                 /* 🔥 MOST IMPORTANT */
+  padding: 24px;
+  background: #f7f9fc;
+  overflow-x: hidden;
+}
+
+/* Mobile */
+.mobile-sidebar-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sidebar-btn {
+    display: block;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+}

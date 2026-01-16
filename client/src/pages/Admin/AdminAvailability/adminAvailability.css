@@ -1,0 +1,154 @@
+/* ===== PAGE LAYOUT ===== */
+.dashboard-main-content {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* ===== PAGE TITLE ===== */
+.dashboard-main-content h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+/* ===== EMPTY / LOADING TEXT ===== */
+.dashboard-main-content p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* ===== TABLE ===== */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== TABLE HEADER ===== */
+.admin-table thead {
+  background: linear-gradient(90deg, #16a085, #1abc9c);
+}
+
+.admin-table thead th {
+  padding: 14px;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== TABLE BODY ===== */
+.admin-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #f0fdfa;
+}
+
+.admin-table td {
+  padding: 14px;
+  font-size: 14px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+/* ===== DOCTOR INFO ===== */
+.admin-table td strong {
+  font-size: 15px;
+  color: #111827;
+}
+
+.admin-table td small {
+  display: block;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* ===== TIME SLOT ===== */
+.admin-table td br {
+  margin-bottom: 6px;
+}
+
+/* ===== APPROVE BUTTON ===== */
+.approve-btn {
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.approve-btn:hover {
+  background: linear-gradient(90deg, #059669, #10b981);
+  transform: translateY(-1px);
+}
+
+.approve-btn:active {
+  transform: scale(0.96);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-table tr {
+    margin-bottom: 16px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .admin-table td {
+    padding: 12px;
+    text-align: right;
+    position: relative;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    text-align: left;
+  }
+}
+
+.reject-btn {
+  margin-left: 8px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #ef4444, #f87171);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.reject-btn:hover {
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  transform: translateY(-1px);
+}

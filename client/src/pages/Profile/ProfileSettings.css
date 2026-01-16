@@ -1,0 +1,204 @@
+/* ===============================
+   PROFILE CARD
+================================ */
+.profile-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   PROFILE HEADER
+================================ */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+/* ===============================
+   AVATAR
+================================ */
+.profile-avatar-container {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0bd7b8, #4978bf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-avatar-initials {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.avatar-edit-button {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.avatar-edit-button:hover {
+  background: #1e40af;
+}
+
+/* ===============================
+   HEADER INFO
+================================ */
+.profile-header-info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin-bottom: 4px;
+}
+
+.profile-header-info p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.card-button {
+  margin-left: auto;
+  background: linear-gradient(135deg, #0bd7b8, #4978bf);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(73, 120, 191, 0.35);
+}
+
+/* ===============================
+   PROFILE CONTENT
+================================ */
+.profile-content {
+  margin-top: 24px;
+}
+
+/* ===============================
+   DISPLAY MODE
+================================ */
+.profile-display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 32px;
+}
+
+.display-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.display-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+/* ===============================
+   EDIT MODE FORM
+================================ */
+.profile-edit-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4978bf;
+  box-shadow: 0 0 0 3px rgba(73, 120, 191, 0.15);
+}
+
+.form-group .email {
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+/* SAVE BUTTON FULL WIDTH */
+.profile-edit-form .card-button {
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-button {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .profile-display,
+  .profile-edit-form {
+    grid-template-columns: 1fr;
+  }
+}

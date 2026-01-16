@@ -1,0 +1,52 @@
+.landing-container {
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+}
+
+.landing-card h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.landing-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.role-dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.proceed-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.proceed-btn:hover {
+  background-color: #1d4ed8;
+}

@@ -1,0 +1,97 @@
+/* ================= DESKTOP ================= */
+
+.dashboard-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #14c8a2, #0f766e);
+  color: #fff;
+  padding: 24px 16px;
+}
+
+/* PROFILE */
+.dashboard-sidebar-profile {
+  margin-bottom: 30px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* NAV */
+.dashboard-sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+.dashboard-sidebar-nav a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #e6fffa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.dashboard-sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dashboard-sidebar-nav a.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+/* ================= BACKDROP ================= */
+
+.sidebar-backdrop {
+  display: none;
+}
+
+.sidebar-close-btn {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .dashboard-sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(12, 12, 12, 0.4);
+    z-index: 999;
+  }
+    .sidebar-close-btn {
+    display: block;
+  }
+}

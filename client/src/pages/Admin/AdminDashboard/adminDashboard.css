@@ -1,0 +1,185 @@
+/* ===== Layout ===== */
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  background: #f4f8fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.admin-sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: linear-gradient(to bottom, #1194be, #0be099);
+  color: white;
+  padding: 20px;
+}
+
+.admin-sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+}
+
+.admin-sidebar nav a {
+  display: block;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.admin-sidebar nav a:hover,
+.admin-sidebar nav a.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Main ===== */
+
+.admin-main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.admin-header div h3{
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #0b6a8a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.page-header h3 {
+  margin: 0;
+  color: #0b6a8a;
+}
+
+/* ===== Stats ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.stat-card h4 {
+  color: #0b6a8a;
+  margin-bottom: 10px;
+}
+
+.stat-card span {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #00bfa6;
+}
+
+/* ===== Table Section ===== */
+.table-section {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  
+}
+
+.table-section h3 {
+  margin-bottom: 15px;
+  color: #0b6a8a;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #eafaf6;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+}
+
+tr:hover {
+  background: #f5fefe;
+}
+
+/* ===== Buttons ===== */
+.approve {
+  background: #00bfa6;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.reject {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.approve:hover {
+  background: #009e92;
+}
+
+.reject:hover {
+  background: #e63939;
+}
+
+/* ===== Appointment Status Colors ===== */
+.status-approved {
+  color: #00bf7cf6; /* green */
+  font-weight: 800;
+}
+
+.status-rejected {
+  color: #ff4d4d; /* red */
+  font-weight: 800;
+}
+
+.status-pending {
+  color: #ff9800; /* orange */
+  font-weight: 800;
+}
+
+
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    display: none;
+  }
+}
+
