@@ -28,7 +28,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await API.post("/doctor/login", form);
+      const res = await API.post("/api/doctor/login", form);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userType", "doctor");

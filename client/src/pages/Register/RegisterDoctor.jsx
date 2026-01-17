@@ -36,7 +36,7 @@ const RegisterDoctor = () => {
         fees: Number(form.fees),
       };
 
-      const res = await API.post("/doctor/register", payload);
+      const res = await API.post("/api/doctor/register", payload);
       alert(res.data.message);
       navigate("/doctor/login");
     } catch (err) {

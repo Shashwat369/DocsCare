@@ -22,7 +22,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await API.post("/admin/login", form);
+      const res = await API.post("/api/admin/login", form);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userType", "admin");
