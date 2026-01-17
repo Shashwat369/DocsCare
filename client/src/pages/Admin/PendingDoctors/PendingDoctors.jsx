@@ -8,7 +8,7 @@ const PendingDoctors = () => {
   const fetchDoctors = async () => {
     try {
       setLoading(true);
-      const res = await API.get("/admin/pending-doctors");
+      const res = await API.get("/api/admin/pending-doctors");
       setDoctors(res.data || []);
     } catch (err) {
       console.error("Pending doctors error:", err);
@@ -24,7 +24,7 @@ const PendingDoctors = () => {
 
   const approveDoctor = async (id) => {
     try {
-      await API.patch(`/admin/approve-doctor/${id}`);
+      await API.patch(`/api/admin/approve-doctor/${id}`);
       fetchDoctors(); // 🔁 refresh list
     } catch {
       alert("Failed to approve doctor");
@@ -35,7 +35,7 @@ const PendingDoctors = () => {
     if (!window.confirm("Reject this doctor?")) return;
 
     try {
-      await API.delete(`/admin/reject-doctor/${id}`);
+      await API.delete(`/api/admin/reject-doctor/${id}`);
       fetchDoctors(); // 🔁 refresh list
     } catch {
       alert("Failed to reject doctor");

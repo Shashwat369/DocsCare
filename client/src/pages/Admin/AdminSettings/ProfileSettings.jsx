@@ -21,7 +21,7 @@ const ProfileSettings = () => {
     try {
       setLoading(true);
 
-      await API.patch("/admin/update-profile", {
+      await API.patch("/api/admin/update-profile", {
         clinicName,
       });
 

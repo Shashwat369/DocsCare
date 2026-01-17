@@ -8,7 +8,7 @@ const ApprovedDoctors = () => {
 
   const fetchApprovedDoctors = async () => {
     try {
-      const res = await API.get("/admin/approved-doctors");
+      const res = await API.get("/api/admin/approved-doctors");
       setDoctors(res.data);
     } catch (err) {
       console.error(err);

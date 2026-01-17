@@ -19,7 +19,7 @@ const AdminAvailability = () => {
 
   const approve = async (id) => {
     try {
-      await API.put(`/availability/approve/${id}`);
+      await API.put(`/api/availability/approve/${id}`);
       alert("Availability approved");
       fetchPending();
     } catch (err) {
@@ -31,7 +31,7 @@ const AdminAvailability = () => {
   const reason = prompt("Reason for rejection (optional):");
 
   try {
-    await API.put(`/availability/reject/${id}`, {
+    await API.put(`/api/availability/reject/${id}`, {
       reason,
     });
 

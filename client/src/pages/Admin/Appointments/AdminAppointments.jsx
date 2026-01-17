@@ -12,7 +12,7 @@ const AdminAppointments = () => {
   const fetchAppointments = async () => {
     try {
       const res = await API.get(
-        `/admin/appointments?status=${status}&page=${page}&limit=${limit}`
+        `/api/admin/appointments?status=${status}&page=${page}&limit=${limit}`
       );
       setAppointments(res.data.appointments);
       setPages(res.data.totalPages);
@@ -26,7 +26,7 @@ const AdminAppointments = () => {
   }, [status, page]);
 
   const updateStatus = async (id, status) => {
-    await API.patch(`/admin/appointments/${id}`, { status });
+    await API.patch(`/api/admin/appointments/${id}`, { status });
     fetchAppointments();
   };
 
