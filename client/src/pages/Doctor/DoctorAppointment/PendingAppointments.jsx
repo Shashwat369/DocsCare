@@ -11,7 +11,7 @@ const PendingAppointments = () => {
   useEffect(() => {
     const fetchPendingAppointments = async () => {
       try {
-        const res = await API.get("/appointments/doctor");
+        const res = await API.get("/api/appointments/doctor");
         const allAppointments = res.data;
 
         const pending = allAppointments.filter(
@@ -33,7 +33,7 @@ const PendingAppointments = () => {
     try {
       setActionLoading(appointmentId);
 
-      await API.put("/appointments/update-status", {
+      await API.put("/api/appointments/update-status", {
         appointmentId,
         status,
       });

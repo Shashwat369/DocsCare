@@ -10,7 +10,7 @@ const Patients = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const { data } = await API.get("/appointments/patients");
+        const { data } = await API.get("/api/appointments/patients");
         setPatients(data);
       } catch (err) {
         console.error(err);

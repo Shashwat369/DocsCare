@@ -10,7 +10,7 @@ const MyAppointments = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const res = await API.get("/appointments/my");
+        const res = await API.get("/api/appointments/my");
         setAppointments(res.data.appointments || []);
       } catch (error) {
         console.error("Failed to fetch appointments", error);
@@ -29,7 +29,6 @@ const MyAppointments = () => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // ✅ UPCOMING (approved + future)
   const upcomingAppointments = appointments.filter((appt) => {
     return (
       appt.status === "approved" &&
@@ -37,7 +36,7 @@ const MyAppointments = () => {
     );
   });
 
-  // ✅ EXPIRED (past)
+
   const expiredAppointments = appointments.filter((appt) => {
     return new Date(appt.date) < today;
   });
@@ -49,8 +48,7 @@ const MyAppointments = () => {
       <main className="dashboard-main-content">
         <h1 className="page-title">My Appointments</h1>
 
-        {/* UPCOMING SECTION */}
-{/* UPCOMING SECTION */}
+
 {upcomingAppointments.length > 0 && (
   <>
     <h3 className="section-title">Upcoming Appointments</h3>

@@ -11,8 +11,8 @@ const FindDoctor = () => {
     // This function runs when the component loads
     const fetchAllDoctors = async () => {
       try {
-        // 1. Call your new API endpoint
-        const res = await API.get("/doctor/all");
+     
+        const res = await API.get("/api/doctor/all");
         setDoctors(res.data.doctors);
         setLoading(false);
       } catch (error) {
@@ -34,7 +34,7 @@ const FindDoctor = () => {
         {loading ? (
           <p>Loading doctors...</p>
         ) : (
-          // 2. We use the same grid layout as the dashboard
+          
           <div className="dashboard-widget-grid">
             {doctors.length > 0 ? (
               doctors.map((doc) => (

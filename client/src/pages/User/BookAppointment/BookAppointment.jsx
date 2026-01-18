@@ -21,10 +21,10 @@ const BookAppointment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const doctorRes = await API.get(`/doctor/${doctorId}`);
+        const doctorRes = await API.get(`/api/doctor/${doctorId}`);
         setDoctor(doctorRes.data.doctor);
 
-        const availabilityRes = await API.get(`/availability/${doctorId}`);
+        const availabilityRes = await API.get(`/api/availability/${doctorId}`);
         setAvailability(availabilityRes.data);
 
         setLoading(false);
@@ -51,7 +51,7 @@ const BookAppointment = () => {
     }
 
     try {
-      const res = await API.post("/appointments/book", {
+      const res = await API.post("/api/appointments/book", {
         doctorId: doctor._id,
         date: selectedDate,
         time: selectedTime,

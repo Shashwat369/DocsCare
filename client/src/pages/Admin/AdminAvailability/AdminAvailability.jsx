@@ -8,7 +8,7 @@ const AdminAvailability = () => {
 
   const fetchPending = async () => {
     try {
-      const { data } = await API.get("/availability/pending");
+      const { data } = await API.get("/api/availability/pending");
       setList(data);
     } catch (err) {
       alert("Failed to load pending availabilities");

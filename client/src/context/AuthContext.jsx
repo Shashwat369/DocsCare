@@ -6,15 +6,12 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [userType, setUserType] = useState(localStorage.getItem("userType"));
 
-  // 1. Get the user data string from storage
+
   const storedUser = localStorage.getItem("user");
 
-  // 2. Check if it's a valid string *before* parsing
-  //    (We also check for the literal string "undefined", which can be saved by mistake)
   const initialUser =
     storedUser && storedUser !== "undefined" ? JSON.parse(storedUser) : null;
 
-  // 3. Set the initial state safely
   const [user, setUser] = useState(initialUser);
 
   const login = (type, userData) => {

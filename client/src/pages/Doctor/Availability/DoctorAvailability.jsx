@@ -12,14 +12,13 @@ const DoctorAvailability = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // 🔥 NEW: current availability
   const [myAvailability, setMyAvailability] = useState(null);
 
-  // 🔥 FETCH current availability
+
   useEffect(() => {
     const fetchMyAvailability = async () => {
       try {
-        const { data } = await API.get("/availability/my");
+        const { data } = await API.get("/api/availability/my");
         setMyAvailability(data);
       } catch (err) {
         // ignore if not found
@@ -68,7 +67,7 @@ const DoctorAvailability = () => {
 
     try {
       setLoading(true);
-      await API.post("/availability/doctor", { days, slots });
+      await API.post("/api/availability/doctor", { days, slots });
 
       setMessage("Availability submitted for admin approval");
       setDays([]);
@@ -77,7 +76,7 @@ const DoctorAvailability = () => {
       setEvening({ from: "", to: "" });
 
       // 🔥 refresh availability
-      const { data } = await API.get("/availability/my");
+      const { data } = await API.get("/api/availability/my");
       setMyAvailability(data);
     } catch {
       setMessage("Something went wrong. Try again.");

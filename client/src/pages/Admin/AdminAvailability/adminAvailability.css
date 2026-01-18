@@ -48,9 +48,7 @@
   transition: background 0.2s ease;
 }
 
-.admin-table tbody tr:hover {
-  background: #f0fdfa;
-}
+
 
 .admin-table td {
   padding: 14px;

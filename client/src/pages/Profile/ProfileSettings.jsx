@@ -60,7 +60,7 @@ const ProfileSettings = () => {
     e.preventDefault();
     setLoading(true);
 
-    const apiPath = userType === "user" ? "/user/profile" : "/doctor/profile";
+    const apiPath = userType === "user" ? "/api/user/profile" : "/api/doctor/profile";
 
     try {
       const res = await API.put(apiPath, formData);
@@ -88,7 +88,7 @@ const ProfileSettings = () => {
     setLoading(true);
 
     const apiPath =
-      userType === "user" ? "/user/profile/picture" : "/doctor/profile/picture";
+      userType === "user" ? "/api/user/profile/picture" : "/api/doctor/profile/picture";
 
     try {
       const res = await API.post(apiPath, formData, {

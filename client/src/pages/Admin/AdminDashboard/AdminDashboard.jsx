@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
   const handleApprove = async (id) => {
     try {
-      await API.patch(`/admin/approve-doctor/${id}`);
+      await API.patch(`/api/admin/approve-doctor/${id}`);
       fetchDashboard();
     } catch {
       alert("Failed to approve doctor");
@@ -34,7 +34,7 @@ const AdminDashboard = () => {
   const handleReject = async (id) => {
     if (!window.confirm("Reject doctor?")) return;
     try {
-      await API.delete(`/admin/reject-doctor/${id}`);
+      await API.delete(`/api/admin/reject-doctor/${id}`);
       fetchDashboard();
     } catch {
       alert("Failed to reject doctor");

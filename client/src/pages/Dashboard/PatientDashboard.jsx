@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const res = await API.get("/appointments/my");
+        const res = await API.get("/api/appointments/my");
         const appointments = res.data.appointments || [];
 
         const now = new Date();

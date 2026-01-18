@@ -10,7 +10,7 @@ const DoctorAppointments = () => {
   }, []);
 
   const fetchAppointments = async () => {
-    const res = await API.get("/appointments/doctor");
+    const res = await API.get("/api/appointments/doctor");
 
     const sorted = res.data.sort((a, b) => {
       const dateA = new Date(`${a.date} ${a.time}`);
@@ -22,7 +22,7 @@ const DoctorAppointments = () => {
   };
 
   const updateStatus = async (id, status) => {
-    await API.put("/appointments/update-status", {
+    await API.put("/api/appointments/update-status", {
       appointmentId: id,
       status,
     });

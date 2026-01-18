@@ -16,7 +16,7 @@ const DoctorDashboard = () => {
   useEffect(() => {
     const loadDashboard = async () => {
       try {
-        const res = await API.get("/appointments/doctor");
+        const res = await API.get("/api/appointments/doctor");
         const appointments = res.data;
 
         const todayStr = new Date().toDateString();

@@ -11,7 +11,7 @@ const TodayAppointments = () => {
   useEffect(() => {
     const fetchTodayAppointments = async () => {
       try {
-        const res = await API.get("/appointments/doctor");
+        const res = await API.get("/api/appointments/doctor");
         const allAppointments = res.data;
 
         const today = new Date().toDateString();
