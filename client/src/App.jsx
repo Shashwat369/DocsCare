@@ -42,6 +42,7 @@ import AdminSettings from "./pages/Admin/AdminSettings/ProfileSettings";
 import DoctorLayout from "./layout/DoctorLayout";
 
 import ComingSoon from "./components/ComingSoon/ComingSoon";
+import NotFound from "./components/NotFound/NotFound";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -99,6 +100,9 @@ const AppLayout = () => {
           <Route path="/user-profile" element={<ProfileSettings />} />
 
           <Route path="/blog" element={<HealthBlog />} />
+          <Route path="/my-medical-records" element={<ComingSoon title="Coming Soon"/>} />
+          <Route path="/find-pharmacy" element={<ComingSoon title="Coming Soon"/>} />
+          
         </Route>
 
         {/* DOCTOR */}
@@ -174,7 +178,7 @@ const AppLayout = () => {
           <Route path="settings" element={<AdminSettings />} />
         </Route>
 
-        <Route path="*" element={<ComingSoon title="Coming Soon" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       {!shouldHideFooter && <Footer />}

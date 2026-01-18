@@ -1,16 +1,14 @@
-/* ===============================
-   PROFILE CARD
-================================ */
+
 .profile-card {
   background: #ffffff;
   border-radius: 18px;
   padding: 28px 32px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* ===============================
-   PROFILE HEADER
-================================ */
 .profile-header {
   display: flex;
   align-items: center;
@@ -35,6 +33,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .profile-avatar-img {
@@ -94,6 +93,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
 }
 
 .card-button:hover {
@@ -113,13 +113,14 @@
 ================================ */
 .profile-display {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px 32px;
 }
 
 .display-group {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .display-label {
@@ -133,6 +134,7 @@
   font-size: 15px;
   font-weight: 500;
   color: #0f172a;
+  word-wrap: break-word;
 }
 
 /* ===============================
@@ -140,13 +142,14 @@
 ================================ */
 .profile-edit-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px 32px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .form-group label {
@@ -158,6 +161,7 @@
 
 .form-group input,
 .form-group select {
+  width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid #e5e7eb;
@@ -177,16 +181,20 @@
   cursor: not-allowed;
 }
 
-/* SAVE BUTTON FULL WIDTH */
+/* SAVE BUTTON */
 .profile-edit-form .card-button {
   grid-column: span 2;
   margin-top: 10px;
 }
 
 /* ===============================
-   RESPONSIVE
+   RESPONSIVE (MOBILE)
 ================================ */
 @media (max-width: 768px) {
+  .profile-card {
+    padding: 20px 16px;
+  }
+
   .profile-header {
     flex-direction: column;
     align-items: flex-start;
@@ -195,10 +203,16 @@
   .card-button {
     margin-left: 0;
     margin-top: 12px;
+    width: 100%;
+    text-align: center;
   }
 
   .profile-display,
   .profile-edit-form {
     grid-template-columns: 1fr;
+  }
+
+  .profile-edit-form .card-button {
+    grid-column: span 1;
   }
 }

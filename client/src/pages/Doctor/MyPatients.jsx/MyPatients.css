@@ -1,10 +1,10 @@
-/* ===============================
-   DASHBOARD MAIN CONTENT
-================================ */
+
 .dashboard-main-content {
   padding: 24px 32px;
   background: #f8fafc;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ===============================
@@ -18,7 +18,7 @@
 }
 
 /* ===============================
-   PATIENTS TABLE
+   PATIENTS TABLE (DESKTOP)
 ================================ */
 .patients-table {
   width: 100%;
@@ -34,7 +34,6 @@
   background: #eafaf7;
   color: #0b3c5d;
   font-weight: 600;
-  font-size: 14px;
 }
 
 /* TABLE ROW (CARD STYLE) */
@@ -81,19 +80,16 @@
   text-transform: capitalize;
 }
 
-/* UPCOMING */
 .status.upcoming {
   background: #ecfdf5;
   color: #047857;
 }
 
-/* CANCELLED */
 .status.cancelled {
   background: #fef2f2;
   color: #b91c1c;
 }
 
-/* COMPLETED (future ready) */
 .status.completed {
   background: #eff6ff;
   color: #1d4ed8;
@@ -109,11 +105,11 @@
 }
 
 /* ===============================
-   RESPONSIVE (MOBILE)
+   MOBILE RESPONSIVE FIX
 ================================ */
 @media (max-width: 768px) {
   .dashboard-main-content {
-    padding: 18px;
+    padding: 16px;
   }
 
   .patients-table {
@@ -126,18 +122,36 @@
 
   .patients-table tbody tr {
     display: block;
-    padding: 12px;
+    margin-bottom: 16px;
+    padding: 14px;
+    border-radius: 16px;
+    width: 100%;
   }
 
   .patients-table td {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 8px 0;
+    width: 100%;
   }
 
   .patients-table td::before {
     content: attr(data-label);
     font-weight: 600;
-    color: #555;
+    color: #64748b;
+    flex-shrink: 0;
+  }
+
+  .status {
+    margin-top: 4px;
   }
 }
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .dashboard-main-content h1 {
+    font-size: 22px;
+  }
+}
+

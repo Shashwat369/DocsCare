@@ -1,182 +1,215 @@
-/* PAGE WRAPPER */
+
+/* ===============================
+   PAGE WRAPPER
+================================ */
 .availability-page {
-    min-height: 70vh;
-    background: linear-gradient(135deg, #f4fdfb, #f6f9ff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #f4fdfb, #f6f9ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-/* CARD */
+/* ===============================
+   CARD
+================================ */
 .availability-card {
-    background: #ffffff;
-    width: 100%;
-    max-width: 520px;
-    height: 100%;
-    border-radius: 16px;
-    padding: 28px 32px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  padding: 24px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  overflow-x: hidden;
 }
 
-/* TITLE */
+/* ===============================
+   TITLE
+================================ */
 .availability-card h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #0b3c5d;
-    text-align: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #0b3c5d;
+  text-align: center;
 }
 
-/* SECTION TITLE */
+/* ===============================
+   SECTION TITLE
+================================ */
 .section-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-/* DAYS GRID */
+/* ===============================
+   DAYS GRID
+================================ */
 .days-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
-/* DAY CHECKBOX */
+/* ===============================
+   DAY CHECKBOX
+================================ */
 .day-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 12px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    color: #333;
-    user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+
+  min-width: 0;
 }
 
 .day-option:hover {
-    border-color: #0bd7b8;
-    background: #f0fffb;
+  border-color: #0bd7b8;
+  background: #f0fffb;
 }
 
 .day-option input {
-    accent-color: #0bd7b8;
+  accent-color: #0bd7b8;
 }
 
-/* TIME ROW */
-.time-row {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 22px;
-}
-
-/* TIME INPUT */
-.time-row input {
-    flex: 1;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;
-    font-size: 14px;
-    outline: none;
-    transition: 0.2s;
-}
-
-.time-row input:focus {
-    border-color: #4978bf;
-    box-shadow: 0 0 0 3px rgba(73, 120, 191, 0.15);
-}
-
-/* SUBMIT BUTTON */
-.submit-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #0bd7b8, #4978bf);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(73, 120, 191, 0.35);
-}
-
-/* SLOT TYPE ROW */
+/* ===============================
+   SLOT TYPE ROW
+================================ */
 .slot-type-row {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 18px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .slot-type-row label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
 }
 
 .slot-type-row input {
-    accent-color: #0bd7b8;
+  accent-color: #0bd7b8;
 }
 
-.section-subtitle {
-    font-size: 13px;
-    font-weight: 600;
-    color: #0b3c5d;
-    margin-bottom: 8px;
-    margin-top: 8px;
+/* ===============================
+   TIME ROW
+================================ */
+.time-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
 }
 
-.availability-message {
-    margin-top: 14px;
-    font-size: 14px;
-    text-align: center;
-    color: #2563eb;
+.time-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.time-row input:focus {
+  border-color: #4978bf;
+  box-shadow: 0 0 0 3px rgba(73, 120, 191, 0.15);
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0bd7b8, #4978bf);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(73, 120, 191, 0.35);
+}
+
+/* ===============================
+   STATUS BOXES
+================================ */
+.rejection-box,
+.pending-box,
+.approved-box {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .rejection-box {
   background: #fff1f2;
   border-left: 5px solid #ef4444;
-  padding: 14px;
-  border-radius: 8px;
-  margin-bottom: 16px;
 }
 
 .pending-box {
   background: #fff7ed;
   border-left: 5px solid #f59e0b;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 16px;
 }
 
 .approved-box {
   background: #ecfdf5;
   border-left: 5px solid #10b981;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 16px;
 }
 
+.section-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0b3c5d;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
 
-/* RESPONSIVE */
+.availability-message {
+  margin-top: 14px;
+  font-size: 14px;
+  text-align: center;
+  color: #2563eb;
+}
+
+/* ===============================
+   MOBILE FIX
+================================ */
+@media (max-width: 768px) {
+  .days-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 480px) {
-    .days-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .availability-card {
+    padding: 20px 16px;
+  }
 
-    .availability-card {
-        padding: 22px;
-    }
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
 }
